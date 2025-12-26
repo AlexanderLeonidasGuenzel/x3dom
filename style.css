@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+x3d {
+  width: 400px;
+  height: 400px;
+  background: #ebebeb;
+}
+
+.container {
+  border: 1px solid black;
+}
