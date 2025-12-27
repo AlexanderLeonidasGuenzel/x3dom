@@ -1,16 +1,23 @@
-const stopBtn = document.querySelector("#stop");
-const startBtn = document.querySelector("#start");
-const spin = document.querySelector("#spin");
-const container = document.querySelectorAll(".container");
+const containers = document.querySelectorAll(".container");
+const prevBtn = document.getElementById("prev");
+const nextBtn = document.getElementById("next");
 
-stopBtn.addEventListener("click", () => {
-  spin.classList.remove("spin");
-});
-startBtn.addEventListener("click", () => {
-  window.location.reload();
+let currentIndex = 0;
+
+showContainer(currentIndex);
+
+function showContainer(index) {
+  containers.forEach((c, i) => {
+    c.classList.toggle("active", i === index);
+  });
+}
+
+nextBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % containers.length;
+  showContainer(currentIndex);
 });
 
-container.forEach((c, index) => {
-  if (index === 0) return;
-  c.style.display = "none";
+prevBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + containers.length) % containers.length;
+  showContainer(currentIndex);
 });

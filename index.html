@@ -17,10 +17,12 @@
     <script defer src="script.js"></script>
   </head>
   <body>
+    <h1>3D Elements with X3-DOM</h1>
     <main>
+      <button class="page" id="prev">&lt;</button>
       <!----tree+car----->
       <div class="container" id="car-container">
-        <h2>Auto</h2>
+        <h2>Car</h2>
         <x3d id="car">
           <scene>
             <viewpoint position="0 2 20"></viewpoint>
@@ -88,12 +90,10 @@
             </transform>
           </scene>
         </x3d>
-        <button class="spin-control" id="stop">Stop</button>
-        <button class="spin-control" id="start">Start</button>
       </div>
       <!-----tree----->
       <div class="container" id="tree-container">
-        <h2>Baum</h2>
+        <h2>Tree</h2>
         <x3d>
           <scene class="tree">
             <transform rotation="0 1 0 -0.3">
@@ -156,9 +156,9 @@
       </div>
       <!----pyramid--->
       <div class="container" id="pyramid-container">
-        <h2>Pyramide</h2>
+        <h2>Pyramid</h2>
         <x3d>
-          <scene class="scene" id="pyramid">
+          <scene id="pyramid">
             <transform rotation="0 1 0 -0.5">
               <transform scale="2 2 2">
                 <shape>
@@ -191,6 +191,7 @@
           </scene>
         </x3d>
       </div>
+      <button class="page" id="next">&gt;</button>
     </main>
   </body>
 </html>

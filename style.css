@@ -5,48 +5,77 @@
 }
 
 body {
-  background-color: rgb(39, 39, 39);
+  background-color: rgb(27, 27, 27);
   height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-width: fit-content;
 }
 
 main {
-  background-color: rgb(201, 201, 201);
-  width: 600px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px clamp(5px, 5dvw, 100px);
+  background-color: rgb(221, 221, 221);
 }
 
 x3d {
-  width: 400px;
   height: 400px;
-  background: #f8f8f8;
 }
 
 .container {
   text-align: center;
-  width: 400px;
+  width: clamp(100px, 70dvw, 400px);
   position: relative;
-  display: block;
   margin: 0 auto;
+}
+
+.container {
+  display: none;
+}
+
+.container.active {
+  display: block;
 }
 
 .spin-control {
   padding: 5px 10px;
   background-color: white;
+  border: 1px solid black;
   cursor: pointer;
 }
 
-#start {
-  position: absolute;
-  bottom: 5px;
-  left: 50px;
+.page {
+  background-color: rgb(32, 32, 32);
+  color: white;
+  font-size: 30px;
+  padding: 15px;
+  border: none;
+  --radius: 20px;
+  cursor: pointer;
 }
-#stop {
-  position: absolute;
-  bottom: 5px;
-  right: 50px;
+
+h1 {
+  color: white;
+  margin: 20px;
+  font-size: clamp(1rem, 5dvw, 2.5rem);
+  letter-spacing: 3px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.page#prev {
+  border-bottom-left-radius: var(--radius);
+  border-top-left-radius: var(--radius);
+}
+.page#next {
+  border-bottom-right-radius: var(--radius);
+  border-top-right-radius: var(--radius);
 }
 
 .spin {
