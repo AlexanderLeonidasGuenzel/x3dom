@@ -4,12 +4,60 @@
   padding: 0;
 }
 
+body {
+  background-color: rgb(39, 39, 39);
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  background-color: rgb(201, 201, 201);
+  width: 600px;
+}
+
 x3d {
   width: 400px;
   height: 400px;
-  background: #ebebeb;
+  background: #f8f8f8;
 }
 
 .container {
-  border: 1px solid black;
+  text-align: center;
+  width: 400px;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+}
+
+.spin-control {
+  padding: 5px 10px;
+  background-color: white;
+  cursor: pointer;
+}
+
+#start {
+  position: absolute;
+  bottom: 5px;
+  left: 50px;
+}
+#stop {
+  position: absolute;
+  bottom: 5px;
+  right: 50px;
+}
+
+.spin {
+  animation: spin 8s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
 }
