@@ -27,6 +27,15 @@ x3d {
   height: 400px;
 }
 
+a:any-link,
+a:visited,
+a:focus,
+a:target {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 .container {
   text-align: center;
   width: clamp(100px, 70dvw, 400px);
@@ -57,6 +66,12 @@ x3d {
   border: none;
   --radius: 20px;
   cursor: pointer;
+}
+
+.page:focus,
+.page:target,
+.page:hover {
+  background-color: rgb(58, 58, 58);
 }
 
 h1 {
